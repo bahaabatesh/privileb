@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/login_menu_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name" />
+
+        <TextView
+            android:id="@+id/btn_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign out"
+            android:paddingTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/menu_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call us"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_menu_hotline"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotline"/>
+        </RelativeLayout>
+
+        <LinearLayout android:id="@+id/menu_login_aboutprivileb" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_alldeals" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_nearbyme" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_privilebcard" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_categories" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_favorites" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_charities" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:id="@+id/menu_login_contactus" android:layout_width="match_parent" android:layout_height="48dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stub_ids_root"
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- Example of an extra ID you might add later:
+    <View android:id="@+id/some_future_id" android:layout_width="0dp" android:layout_height="0dp"/>
+    -->
+
+</LinearLayout>

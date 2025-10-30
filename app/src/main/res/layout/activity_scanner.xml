@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/scanner_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/scanner_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanner Welcome" />
+
+        <ImageView
+            android:id="@+id/scanner_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@android:color/darker_gray" />
+
+        <Spinner
+            android:id="@+id/scanner_offers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/scanner_offer_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Offer description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/scanner_code1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Code 1"/>
+
+            <EditText
+                android:id="@+id/scanner_code2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Code 2"/>
+
+            <EditText
+                android:id="@+id/scanner_code3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Code 3"/>
+
+            <EditText
+                android:id="@+id/scanner_code4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Code 4"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/scanner_scanoffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Offer" />
+    </LinearLayout>
+</ScrollView>

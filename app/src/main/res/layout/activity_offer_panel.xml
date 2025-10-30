@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/offer_panel_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_below="@id/offer_panel_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/offer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offer Name" />
+
+        <TextView
+            android:id="@+id/offer_panel_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/offer_panel_retailer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retailer" />
+
+        <TextView
+            android:id="@+id/offer_panel_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/offer_panel_unlimited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlimited?" />
+    </LinearLayout>
+
+    <!-- simple progress overlay -->
+    <RelativeLayout
+        android:id="@+id/prog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#55000000"
+        android:visibility="gone"/>
+
+</RelativeLayout>
