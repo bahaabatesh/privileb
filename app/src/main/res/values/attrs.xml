@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Custom attributes expected by Fort SDK layouts using com.victor.loading.RotateLoading -->
+
+    <!-- Used by Fort AAR layouts that reference com.victor.loading.RotateLoading -->
     <declare-styleable name="RotateLoading">
         <attr name="loading_color" format="color" />
         <attr name="loading_width" format="dimension" />
     </declare-styleable>
+
+    <!-- Legacy SpotsDialog theme attributes (kept for compatibility with your styles) -->
+    <attr name="DialogTitleAppearance" format="reference" />
+    <attr name="DialogTitleText" format="string|reference" />
+    <attr name="DialogSpotColor" format="color|reference" />
+    <attr name="DialogSpotCount" format="integer" />
+
 </resources>

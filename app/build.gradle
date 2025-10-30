@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.eventus.privileb"
-        minSdkVersion 21        // was 19; 2.2.0 of ConstraintLayout requires >=21
+        minSdkVersion 21        // CL 2.2.0 requires >=21
         targetSdkVersion 36
         versionCode 8
         versionName "1.32"
@@ -76,11 +76,9 @@ dependencies {
 
     // --- Third-party UI libs (off JCenter) ---
     implementation 'com.github.peng8350:JPTabBar:1.4.0'
-    implementation 'com.github.d-max:spots-dialog:1.1@aar'
     implementation 'com.shamanland:fonticon:0.1.9'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    // If you kept our custom RotateLoading, SpinKit is optional:
-    // implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    // SpotsDialog: REMOVED — we’ll provide a local shim to keep your code unchanged
 
     // --- Other SDKs ---
     implementation 'com.facebook.android:facebook-android-sdk:12.0.0'
