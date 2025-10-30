@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eventus.privileb" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/privileb_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/privileb_main"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false"
+        android:name=".MyApplication"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        >
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:name="com.eventus.privileb.LandingActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:exported="true"
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.eventus.privileb.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            >
+        </activity>
+        <activity android:name="com.eventus.privileb.SignupActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.HomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FilterActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.OfferActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.LocationActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.CardSignActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.MenuActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.LoggedinActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.NearbyListingActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.MenuLoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FavoriteActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.ImagePopupActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.BuyCardActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.LoginHomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.CCPaymentActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FilterscreenL"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FilterscreenC"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FilterscreenLC"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FilterscreenCG"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.FeaturedDealsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.AllDealsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"></activity>
+        <activity android:name="com.eventus.privileb.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+        <activity android:name="com.eventus.privileb.CharitiesActivity"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAhj_S-1kobHSU-cq6wM5H2Lhbtnd4FNQ8"/>
+
+        <service
+            android:name="com.eventus.privileb.Util.LocationUpdateService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <receiver android:name="com.eventus.privileb.Util.AlarmReceiver"
+            android:exported="true"/>
+    </application>
+</manifest>

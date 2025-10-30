@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Privileb</string>
+    <string name="app_id">1392187260859254</string>
+    <string name="sign_up">Sign up today and be one of the first
+     to know about our daily deals, exclusive
+     offers, latest brands … and more!</string>
+    <string name="deals_title">DEALS &amp; OFFERS</string>
+    <string name="deals_juliano">Juliano Asmar Beauty &amp; Spa</string>
+    <string name="deals_date">03/2017 to 09/2018</string>
+    <string name="filter_search">Search</string>
+    <string name="offer_text1">BUY TWO FOR THE PRICE OF ONE - MASSAGE TREATMENTS</string>
+    <string name="offer_date">Date: From 21/02/2017 to 22/08/2018</string>
+    <string name="offer_underline"><u>Get direction</u></string>
+    <string name="offer_text2">Description:\nJuliano Asmar ... Creating Art &amp; Beauty As a contemporary artist and a beauty creator,
+        Juliano Asmar,styles the hair with his unique and exceptional vision of Art. He manipluates colors and textures to create great looks for modern women.
+        From Baabda and Hazmieh, to Amman in Jordan, Juliano Asmar is still Going forward to respond to all women expectations.
+        Juliano Asmar is the exclusive hairdresser for all LBC,OTV,Hiya &amp; Tele Liban TV Stations staffs.</string>
+    <string name="card_text1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</string>
+    <string name="card_text2">Industry standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to
+        make a type specimen book.</string>
+    <string name="card_text3">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially uncharged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum Passages.</string>
+    <string name="benefits_text1">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially uncharged.
+    It was popularised in the 1960s with the release of the leap into electronic typesetting,Letraset sheets containing Lorem Ipsum Passages.</string>
+    <string name="benefits_text2">Industry standard dummy text ever since the 1500s,when an unknown book.</string>
+    <string name="benefits_text3">It has survived not only five centuries, but also essentially uncharged.It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum Popularised in the 1960s with the release passages.</string>
+    <string name="join_text1">Lorem Ipsum is simply dummy text of the and typesetting industry.Lorem Ipsum has been the.when an unknown printer took a galley of type and</string>
+    <string name="join_text2">Scrambledit to make a type specimen book.but also the leap into electronic typesetting,remaining essentially unchanged.</string>
+    <string name="login_text"><u>Sign up now for free</u></string>
+    <string-array name="array_name"><item>Lebanon</item><item>USA</item><item>Canada</item><item>Australia</item><item>Japanese</item><item>Denmark</item></string-array>
+    <string name="search_hint"><font size="14">All of Lebanon</font></string>
+    <string name="categories_search_hint"><font size="14">Search All Categories</font></string>
+    <string name="offers_search_hint"><font size="14">Search Offers</font></string>
+    <string name="turn_on_GPS">Click to turn on GPS, or swipe to ignore</string>
+</resources>
