@@ -1,1 +1,23 @@
-include ':app', ':FORTSDKv1.4'
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        // For legacy libs like JPTabBar
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencyResolutionManagement {
+    // Prefer repos declared here over module-level repos
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // JCenter is sunset; use JitPack instead
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "PrivilebApplication"
+include(":app", ":FORTSDKv1.4")

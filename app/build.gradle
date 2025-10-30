@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+// Apply Google services only if you actually use Firebase features
+// apply plugin: 'com.google.gms.google-services'
 
 android {
     namespace "com.eventus.privileb"
@@ -13,8 +15,9 @@ android {
         versionName "1.32"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
+
         manifestPlaceholders = [
-                onesignal_app_id               : "990074f2-9dd5-4014-a408-82a04a46aea8",
+                onesignal_app_id              : "990074f2-9dd5-4014-a408-82a04a46aea8",
                 onesignal_google_project_number: "REMOTE"
         ]
     }
@@ -39,60 +42,60 @@ android {
         }
     }
 
-    // Java 11 is fine for sources; Gradle/AGP will run on JDK 17
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-
-    // (If you had a repositories block here before, it was ignored by Gradle. Removed.)
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     implementation files('libs/simple-side-drawer2.jar')
-    implementation 'com.jpeng:JPTabBar:1.2.3'
 
-    implementation 'androidx.appcompat:1.7.0'
-    implementation 'androidx.constraintlayout:2.2.0'
-    implementation 'com.google.android.material:1.12.0'
-
-    testImplementation 'junit:junit:4.13.2'
-
-    implementation 'com.android.volley:1.2.1'
-    implementation 'org.apache.httpcomponents:httpcore:4.4.13'
-    implementation "com.squareup.picasso:2.71828"
-    implementation 'com.github.d-max:spots-dialog:0.4@aar'
+    // --- AndroidX / UI (FIXED the coordinates) ---
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation project(':FORTSDKv1.4')
-    implementation 'com.victor:lib:1.0.1'
-    implementation 'com.google.code.gson:gson:2.10.1'
-    implementation 'com.shamanland:fonticon:0.1.8'
-    implementation('com.nispok:snackbar:2.11.+') {
-        exclude group: 'com.google.android', module: 'support-v4'
-    }
-    implementation 'com.google.guava:guava:21.0'
-    implementation 'org.bouncycastle:bcprov-jdk16:1.46'
+    // --- Google Play services ---
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    // --- Networking / Utils ---
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.13'
     implementation 'commons-codec:commons-codec:1.15'
 
+    // Guava old + listeneablefuture hack (keep as your project expects)
+    implementation 'com.google.guava:guava:21.0'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
+    // --- Barcode / QR ---
     implementation 'com.google.zxing:core:3.3.3'
     implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
 
+    // --- Third-party UI libs ---
+    // JPTabBar was on JCenter; pull it via JitPack instead
+    implementation 'com.github.peng8350:JPTabBar:1.4.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.d-max:spots-dialog:0.4@aar'
+    implementation 'com.shamanland:fonticon:0.1.8'
+
+    // NOTE: If this fails to resolve (it used to live on JCenter), we’ll replace it.
+    implementation 'com.victor:lib:1.0.1'
+
+    // --- Other SDKs ---
     implementation 'com.facebook.android:facebook-android-sdk:12.0.0'
-
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
-
-    // NOTE: Billing v5 is old. Leaving as-is to avoid API breaks for now.
-    // Plan a follow-up to migrate to v7+ (Play deadline in 2025).
     implementation 'com.android.billingclient:billing:5.0.0'
 
-    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    // --- Local AAR module ---
+    implementation project(':FORTSDKv1.4')
 
-    implementation 'com.google.android.gms:play-services-location:21.3.0'
-    implementation 'com.google.android.gms:play-services-maps:18.2.0'
-
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    // --- Tests ---
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
