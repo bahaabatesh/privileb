@@ -1,15 +1,15 @@
-apply plugin: 'com.android.application'
-// Apply Google services only if you actually use Firebase features
-// apply plugin: 'com.google.gms.google-services'
+plugins {
+    id 'com.android.application' version '8.6.1'
+    // If you add Firebase later, also apply 'com.google.gms.google-services'
+}
 
 android {
     namespace "com.eventus.privileb"
-
     compileSdkVersion 36
 
     defaultConfig {
         applicationId "com.eventus.privileb"
-        minSdkVersion 19
+        minSdkVersion 21        // was 19; 2.2.0 of ConstraintLayout requires >=21
         targetSdkVersion 36
         versionCode 8
         versionName "1.32"
@@ -17,7 +17,7 @@ android {
         multiDexEnabled true
 
         manifestPlaceholders = [
-                onesignal_app_id              : "990074f2-9dd5-4014-a408-82a04a46aea8",
+                onesignal_app_id               : "990074f2-9dd5-4014-a408-82a04a46aea8",
                 onesignal_google_project_number: "REMOTE"
         ]
     }
@@ -49,10 +49,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation files('libs/simple-side-drawer2.jar')
 
-    // --- AndroidX / UI (FIXED the coordinates) ---
+    // --- AndroidX / UI ---
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
     implementation 'com.google.android.material:material:1.12.0'
@@ -67,8 +67,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'org.apache.httpcomponents:httpcore:4.4.13'
     implementation 'commons-codec:commons-codec:1.15'
-
-    // Guava old + listeneablefuture hack (keep as your project expects)
     implementation 'com.google.guava:guava:21.0'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 
@@ -76,15 +74,13 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.3'
     implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
 
-    // --- Third-party UI libs ---
-    // JPTabBar was on JCenter; pull it via JitPack instead
+    // --- Third-party UI libs (off JCenter) ---
     implementation 'com.github.peng8350:JPTabBar:1.4.0'
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    implementation 'com.shamanland:fonticon:0.1.9'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.github.d-max:spots-dialog:0.4@aar'
-    implementation 'com.shamanland:fonticon:0.1.8'
-
-    // NOTE: If this fails to resolve (it used to live on JCenter), we’ll replace it.
-    implementation 'com.victor:lib:1.0.1'
+    // If you kept our custom RotateLoading, SpinKit is optional:
+    // implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
     // --- Other SDKs ---
     implementation 'com.facebook.android:facebook-android-sdk:12.0.0'

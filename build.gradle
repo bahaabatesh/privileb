@@ -1,28 +1,5 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Using plugins DSL in modules; no buildscript/allprojects repos here.
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-    dependencies {
-        // Keep AGP aligned with your wrapper; 8.6.1 is fine with Java 17
-        classpath 'com.android.tools.build:gradle:8.6.1'
-        classpath 'com.google.gms:google-services:4.4.2'
-        // NOTE: Do not place your app dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
+tasks.register("clean", Delete) {
+    delete(rootProject.buildDir)
 }

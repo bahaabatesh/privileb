@@ -3,18 +3,17 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        // For legacy libs like JPTabBar
+        // For legacy GitHub libs via JitPack
         maven { url 'https://jitpack.io' }
     }
 }
 
 dependencyResolutionManagement {
-    // Prefer repos declared here over module-level repos
+    // Use settings-level repositories; don’t re-declare in project build files
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
-        // JCenter is sunset; use JitPack instead
         maven { url 'https://jitpack.io' }
     }
 }
